@@ -65,7 +65,7 @@
 	<section class="portfolio inner-pd">
 		<div class="container">
 			<h2 class="main-tt">Portfolio</h2>
-			<ul class="porfolio-list">
+			<ul class="porfolio-list clearfix">
 
 				<li style="background-image:url(images/laptops.jpg);">
 					<div class="caption">
@@ -134,6 +134,23 @@
 		<div class="copyright">
 			<p>&copy; copyright 2021, My Portfolio Designs</p>
 		</div>
+		<script>
+			const menuIcon = document.querySelector('.menu-icon');
+			const mainMenu = document.querySelector('nav .main-menu');
+
+			menuIcon.addEventListener('click',()=>{
+				mainMenu.classList.toggle('active');
+			});
+
+			/* 디스플레이로 조절 할 때 (//컴퓨터 너비가 바꼈을때)
+				jquery에서는 필요했을 코드
+			window.addEventListener('resize',()=>{
+				if(window.innerWidth > 600){
+					mainMenu.style.display: block;
+				}
+			})
+			*/
+		</script>
 	</footer>
 </body>
 </html>
